@@ -1,25 +1,22 @@
-name: pipeline
+name: Teste da Calculadora
 
 on:
-    push:
-        branches: [ "main" ]
-    pull_request:
-        branches: [ "main" ]
+  push:
+    branches:
+      - main
 
-    workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
 
-jobs:       
-   build-job:
-        stage: build
-        script:
-            - echo "hello, world!"
+    steps:
+    - name: Checkout do repositório
+      uses: actions/checkout@v2
 
-   test-count:
-        stage: test
-        script:
-            - echo "Testando :D"
+    - name: Instalar dependências
+      run: echo "Não há dependências para instalar"
 
-   deploy-job:
-        stage: deploy
-        script:
-            - echo "Terminou!"
+    - name: Testar Calculadora
+      run: |
+        # Executar algum tipo de teste na calculadora
+        # Por exemplo, você pode abrir o navegador e automatizar interações com a página usando ferramentas como Puppeteer ou Selenium.
