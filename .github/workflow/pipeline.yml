@@ -6,14 +6,14 @@ stages:
 build-job:
   stage: build
   script:
-   - echo "hello, world!"
+   <h1> "hello, world!" </h1>
 
 test-count:
   stage: test
   script:
-    -echo "Testando"
+   <h1> "hello, world!" </h1>
 
 deploy-job:
   stage: deploy
   script:
-    - echo "Terminou"
+   <h1> "hello, world!" </h1>
