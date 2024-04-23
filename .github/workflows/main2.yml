@@ -1,0 +1,27 @@
+name: Teste da Calculadora
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout do repositório
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install Dependencies
+      run: echo "Não há dependências para instalar"
+
+    - name: Testar Calculadora
+      run: |
+        # Executar algum tipo de teste na calculadora
+        # Por exemplo, você pode abrir o navegador e automatizar interações com a página usando ferramentas como Puppeteer ou Selenium.
