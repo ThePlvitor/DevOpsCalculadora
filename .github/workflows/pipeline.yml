@@ -1,19 +1,25 @@
-stages:
-    - build
-    - test
-    - deploy
+name: pipeline
 
-build-job:
-    stage: build
-    script:
-        - echo "hello, world!"
+on:
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
 
-test-count:
-    stage: test
-    script:
-        - echo "Testando :D"
+    workflow_dispatch:
 
-deploy-job:
-    stage: deploy
-    script:
-        - echo "Terminou!"
+jobs:       
+   build-job:
+        stage: build
+        script:
+            - echo "hello, world!"
+
+   test-count:
+        stage: test
+        script:
+            - echo "Testando :D"
+
+   deploy-job:
+        stage: deploy
+        script:
+            - echo "Terminou!"
